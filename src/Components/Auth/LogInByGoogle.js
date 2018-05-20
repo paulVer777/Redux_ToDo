@@ -1,5 +1,5 @@
 import React from 'react'
-import { RaisedButton } from 'material-ui';
+import {RaisedButton} from 'material-ui';
 
 const LogInByGoogle = (props) => (
     <div>

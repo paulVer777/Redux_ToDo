@@ -1,3 +1,5 @@
+import {database} from "../firebase";
+
 const ADD = "todo/ADD";
 const DEL = "todo/DEL";
 const NEWTEXT = "todo/NEWTEXT"
@@ -16,14 +18,13 @@ export default (state = initialState, action) => {
 
         case ADD:
             return state.newtxt ?
-
                 ({
                     ...state,
                     tasks: state.tasks.concat({text: state.newtxt, completed: 'false'}),
                     newtxt: ""
                 })
                 :
-                state
+                state;
         case DEL:
             return {
                 ...state,

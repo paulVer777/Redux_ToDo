@@ -1,10 +1,9 @@
 import React from 'react'
 import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton'
-import {add, del,newText} from '../state/todo'
+import {add, del, newText} from '../state/todo'
 import {connect} from 'react-redux'
 import MenuItem from '@material-ui/core/MenuItem';
-
 
 const style = {
     h: {
@@ -18,7 +17,7 @@ const style = {
 const ToDo = (props) => (
     <div>
 
-        <h1 style={style.h}>Pawelqs Todo list</h1>
+        <h1 style={style.h}>Todos list</h1>
         <TextField
 
             placeholder={'Task name'}
@@ -29,7 +28,6 @@ const ToDo = (props) => (
         <RaisedButton onClick={props.change}
 
                       primary={true}
-
 
         >Klik</RaisedButton>
 
@@ -43,16 +41,15 @@ const ToDo = (props) => (
 )
 const mapStateToProps = (state) => ({
     task: state.todo.tasks,
-    txt:state.todo.newtxt
+    txt: state.todo.newtxt
 })
 
 const mapDispatchToProps = (dispatch) => ({
 
     change: () => dispatch(add()),
     ondelete: (index) => dispatch(del(index)),
-    onInputHandler:(event,value)=>dispatch(newText(value))
+    onInputHandler: (event, value) => dispatch(newText(value))
 })
-
 
 export default connect(
     mapStateToProps,
