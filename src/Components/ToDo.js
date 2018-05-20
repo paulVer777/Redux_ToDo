@@ -5,6 +5,7 @@ import {add, del,newText} from '../state/todo'
 import {connect} from 'react-redux'
 import MenuItem from '@material-ui/core/MenuItem';
 
+
 const style = {
     h: {
         textAlign: 'center',
@@ -18,7 +19,6 @@ const ToDo = (props) => (
     <div>
 
         <h1 style={style.h}>Pawelqs Todo list</h1>
-
         <TextField
 
             placeholder={'Task name'}

@@ -15,7 +15,7 @@ export default (state = initialState, action) => {
     switch (action.type) {
 
         case ADD:
-            return action.text ?
+            return state.newtxt ?
 
                 ({
                     ...state,

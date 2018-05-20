@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
 import ToDo from './Components/ToDo'
-import './App.css';
-import {store} from './store'
 import Counter from './Components/Counter'
+import './App.css';
+
+
 
 class App extends Component {
     render() {
@@ -10,8 +11,8 @@ class App extends Component {
 
             <div>
 
-                <ToDo store={store}/>
-                <Counter store={store}/>
+                <ToDo />
+                <Counter/>
 
             </div>
 
