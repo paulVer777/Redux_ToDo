@@ -2,10 +2,10 @@ const ADD = "todo/ADD";
 const DEL = "todo/DEL"
 
 export const add = () => ({type: ADD});
-export const del = () => ({type: DEL});
+export const del = (index) => ({type: DEL,index});
 
 
-const initialState = [{task: 'grać'}, {task: 'uczyć się'}]
+const initialState = [{task: 'grać na gitarze'}, {task: 'uczyć się'}]
 
 
 export default (state = initialState, action) => {
